@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus SLURM Exporter
+After=slurmctld.service
+Wants=slurmctld.service
+
+[Service]
+ExecStart=/usr/bin/slurm-exporter -listen-address :9341
+Restart=always
+RestartSec=15
+SyslogIdentifier=prometheus-slurm-exporter
+
+[Install]
+WantedBy=multi-user.target

@@ -17,4 +17,5 @@ fpm -s dir -t deb \
     --url "https://github.com/ocf/prometheus-slurm-exporter-deb" \
     --maintainer "root@ocf.berkeley.edu" \
     --force \
-    $GOBIN/=/usr/bin/
+    $GOBIN/=/usr/bin/ \
+    /opt/prometheus-slurm-exporter.service=/lib/systemd/system/

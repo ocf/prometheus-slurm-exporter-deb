@@ -20,5 +20,6 @@ RUN mkdir -m 0777 /opt/go/bin
 ENV GOBIN=/opt/go/bin
 
 COPY package.sh /opt
+COPY prometheus-slurm-exporter.service /opt
 
 CMD ["/opt/package.sh"]

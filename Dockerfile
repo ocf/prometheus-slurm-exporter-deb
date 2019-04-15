@@ -7,7 +7,7 @@ RUN apt-get update \
             ruby-dev \
             rubygems \
             build-essential \
-            golang-1.10 \
+            golang-1.11 \
             golang-github-prometheus-client-golang-dev
 
 RUN gem install --no-ri --no-rdoc fpm -v 1.10.2

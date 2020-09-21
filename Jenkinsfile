@@ -1,5 +1,5 @@
 packagePipeline(
-    dists: ['stretch', 'buster'],
+    dists: ['buster'],
 )
 
 // vim: ft=groovy

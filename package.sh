@@ -2,6 +2,8 @@
 set -euxo pipefail
 
 mkdir -p /tmp/.cache
+export XDG_CACHE_HOME=/tmp/.cache
+
 git clone --branch $SLURM_EXPORTER_TAG https://github.com/vpenso/prometheus-slurm-exporter.git /tmp/slurm-exporter
 cd /tmp/slurm-exporter
 
@@ -19,5 +21,4 @@ fpm -s dir -t deb \
     --maintainer "root@ocf.berkeley.edu" \
     --force \
     $GOBIN/=/usr/bin/ \
-    $XDG_CACHE_HOME=/tmp/.cache \
     /opt/prometheus-slurm-exporter.service=/lib/systemd/system/

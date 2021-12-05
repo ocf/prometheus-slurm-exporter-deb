@@ -1,4 +1,4 @@
-SLURM_EXPORTER_TAG := 0.6
+SLURM_EXPORTER_TAG := 0.19
 
 .PHONY: build-image
 build-image:

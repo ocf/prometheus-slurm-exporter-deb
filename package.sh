@@ -13,7 +13,7 @@ go get -v
 cd /mnt
 fpm -s dir -t deb \
     -n prometheus-slurm-exporter \
-    -v $(echo $SLURM_EXPORTER_TAG | sed 's/[^0-9.]*//g')~ocf1 \
+    -v $(echo $SLURM_EXPORTER_TAG | sed 's/[^0-9.]*//g')~ocf1$DIST_TAG \
     --deb-generate-changes \
     --deb-dist $DIST_TAG \
     --description "Prometheus collector and exporter for metrics extracted from the Slurm resource scheduling system." \
